@@ -5,19 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.title">KAUP — AI Agent Platform for Global Trade</title>
   <meta name="description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform purpose-built for international trade. 23 specialized agents, data stored locally, works offline.">
-  <meta property="og:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
-  <meta property="og:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform for international trade businesses. 23 specialized agents covering the full trade workflow.">
-  <meta property="og:url" content="https://kaup.ai">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="KAUP">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
-  <meta name="twitter:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform for international trade businesses. 23 specialized agents covering the full trade workflow.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <link rel="canonical" href="https://kaup.ai/">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="KAUP">
   <meta name="theme-color" content="#101010">
+  <meta name="google-site-verification" content="01RiUMnis6pg-MivPFV0EDbT2KlpD4Yd47tbIIPHspk">
 
   <!-- Alternate languages for hreflang -->
   <link rel="alternate" hreflang="zh-CN" href="https://kaup.ai/">
@@ -49,7 +42,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
   <style>
     /* ═══════════════════════════════════════════════════════
        DESIGN TOKENS
@@ -1105,13 +1102,45 @@
       }
       .cta-buttons .btn { width: 100%; max-width: 320px; }
     }
+
+    /* ═══════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════ */
+    .faq-section { padding: var(--sp-8xl) 0; border-top: 1px solid var(--hairline); }
+    .faq-grid { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--hairline); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: var(--ff-sans); font-size: 15px; font-weight: 600; color: var(--ink); padding: var(--sp-xl) 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--sp-lg); user-select: none; }
+    .faq-q::after { content: '+'; font-size: 20px; color: var(--primary); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '\2212'; }
+    .faq-a { font-size: 14px; line-height: 1.7; color: var(--body); max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0; }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: var(--sp-xl); }
+
+    /* ═══════════════════════════════════════════════════════
+       SKIP LINK (accessibility)
+       ═══════════════════════════════════════════════════════ */
+    .skip-link { position: absolute; top: -100%; left: var(--sp-lg); background: var(--primary); color: var(--on-primary); padding: var(--sp-sm) var(--sp-lg); border-radius: var(--r-sm); font-size: 14px; font-weight: 600; z-index: 9999; text-decoration: none; transition: top 0.2s; }
+    .skip-link:focus { top: var(--sp-sm); }
   </style>
+  <!-- Google Analytics (replace G-KY2F8QZBEN with your Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KY2F8QZBEN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KY2F8QZBEN');
+  </script>
 </head>
 <body>
 
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <noscript><div style="padding:20px;text-align:center;font-family:sans-serif;color:#f2f2f2;background:#101010;">KAUP requires JavaScript to be enabled for the full experience. Please enable JavaScript in your browser settings.</div></noscript>
+
   <!-- ═══════════════════════════════════════════════════════
-       NAVIGATION
+       HEADER / NAVIGATION
        ═══════════════════════════════════════════════════════ -->
+  <header>
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="#" class="nav-logo" aria-label="KAUP Home">
@@ -1162,6 +1191,12 @@
       <a href="#cta" class="btn btn-primary" data-i18n="nav.getStarted">Get Started</a>
     </div>
   </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content">
 
   <!-- ═══════════════════════════════════════════════════════
        HERO
@@ -1445,6 +1480,47 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
   <div class="container"><hr class="dashed-divider"></div>
 
   <!-- ═══════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow-mono" data-i18n="faq.eyebrow">FAQ</p>
+        <h2 class="display-md" data-i18n="faq.heading">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q1">What is KAUP?</div>
+          <div class="faq-a" data-i18n="faq.a1">KAUP is a Local-First AI Agent platform purpose-built for international trade. It provides 23 specialized AI agents that cover the entire trade lifecycle — from prospect discovery and outreach to order management and logistics — all while keeping your customer data encrypted and stored locally on your device.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q2">How does KAUP protect my data?</div>
+          <div class="faq-a" data-i18n="faq.a2">Customer data resides in your local encrypted SQLite database — physically isolated from the cloud. 13 of the 23 agents run entirely on your device without internet. Compliance is structural, not contractual. Your data never leaves your device unless you explicitly choose to sync.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q3">Does KAUP work offline?</div>
+          <div class="faq-a" data-i18n="faq.a3">Yes. 13 local agents function without internet connectivity — on flights, at factories, at trade shows. Your workflow continues uninterrupted. The remaining 10 cloud agents handle external data lookups when connectivity is available.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q4">What does "Bring Your Own Model" mean?</div>
+          <div class="faq-a" data-i18n="faq.a4">BYOM means you connect your own LLM API key (OpenAI, Anthropic, DeepSeek, etc.) and the key is encrypted and stored locally on your device via the OS keychain. KAUP charges zero platform inference costs — you only pay your LLM provider directly. You retain full model autonomy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q5">Which integrations does KAUP support?</div>
+          <div class="faq-a" data-i18n="faq.a5">KAUP offers desktop-native integrations with WeChat Work, WhatsApp, browser automation, and ERP systems. These are system-level connections that browser-based SaaS platforms fundamentally cannot replicate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-i18n="faq.q6">Is there a free plan?</div>
+          <div class="faq-a" data-i18n="faq.a6">KAUP offers transparent pricing starting with a Standalone plan at $69/month (or ¥499/month). All plans include the full suite of 23 AI agents, local encrypted storage, and BYOM support. Team and Enterprise plans add collaboration features, ERP integration, and private deployment options.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashed Divider -->
+  <div class="container"><hr class="dashed-divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
        CTA
        ═══════════════════════════════════════════════════════ -->
   <section class="cta-section" id="cta">
@@ -1457,6 +1533,8 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══════════════════════════════════════════════════════
        FOOTER
@@ -1651,6 +1729,20 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
       'cta.body': { en: 'Start free. Your data stays on your device.', zh: '免费起步，数据始终属于你。' },
       'cta.primary': { en: 'Get Started Now', zh: '立即开始' },
       'cta.secondary': { en: 'Contact Sales', zh: '联系销售' },
+      'faq.eyebrow': { en: 'FAQ', zh: '常见问题' },
+      'faq.heading': { en: 'Frequently Asked Questions', zh: '常见问题解答' },
+      'faq.q1': { en: 'What is KAUP?', zh: 'KAUP 是什么？' },
+      'faq.a1': { en: 'KAUP is a Local-First AI Agent platform purpose-built for international trade. It provides 23 specialized AI agents that cover the entire trade lifecycle — from prospect discovery and outreach to order management and logistics — all while keeping your customer data encrypted and stored locally on your device.', zh: 'KAUP 是面向国际贸易行业深度定制的 Local-First AI Agent 平台。平台预置 23 个专业 AI Agent，覆盖从客户发现、触达到订单管理与物流的完整贸易流程，同时确保客户数据加密存储于本地设备。' },
+      'faq.q2': { en: 'How does KAUP protect my data?', zh: 'KAUP 如何保护数据安全？' },
+      'faq.a2': { en: 'Customer data resides in your local encrypted SQLite database — physically isolated from the cloud. 13 of the 23 agents run entirely on your device without internet. Compliance is structural, not contractual. Your data never leaves your device unless you explicitly choose to sync.', zh: '客户数据存储于本地加密 SQLite 数据库，与云端物理隔离。23 个 Agent 中有 13 个完全在本地运行，无需网络。合规是架构层面的保障，而非一纸承诺。除非你主动启用同步，数据不会离开你的设备。' },
+      'faq.q3': { en: 'Does KAUP work offline?', zh: 'KAUP 支持离线使用吗？' },
+      'faq.a3': { en: 'Yes. 13 local agents function without internet connectivity — on flights, at factories, at trade shows. Your workflow continues uninterrupted. The remaining 10 cloud agents handle external data lookups when connectivity is available.', zh: '支持。13 个本地 Agent 无需网络即可运行——飞机上、工厂里、展会中，业务流程不中断。其余 10 个云端 Agent 在网络可用时处理外部数据查询。' },
+      'faq.q4': { en: 'What does "Bring Your Own Model" mean?', zh: '"自带模型 (BYOM)" 是什么意思？' },
+      'faq.a4': { en: 'BYOM means you connect your own LLM API key (OpenAI, Anthropic, DeepSeek, etc.) and the key is encrypted and stored locally on your device via the OS keychain. KAUP charges zero platform inference costs — you only pay your LLM provider directly. You retain full model autonomy.', zh: 'BYOM 即接入自有 LLM API Key（OpenAI、Anthropic、DeepSeek 等），密钥通过操作系统密钥链加密存储于本地。KAUP 平台零推理成本，你只需直接向 LLM 供应商付费，模型选择权完全归属用户。' },
+      'faq.q5': { en: 'Which integrations does KAUP support?', zh: 'KAUP 支持哪些系统集成？' },
+      'faq.a5': { en: 'KAUP offers desktop-native integrations with WeChat Work, WhatsApp, browser automation, and ERP systems. These are system-level connections that browser-based SaaS platforms fundamentally cannot replicate.', zh: 'KAUP 提供桌面级原生集成：企业微信、WhatsApp、浏览器自动化、ERP 直连。这些是系统级连接能力，基于浏览器的 SaaS 平台在架构上无法实现。' },
+      'faq.q6': { en: 'Is there a free plan?', zh: '有免费方案吗？' },
+      'faq.a6': { en: 'KAUP offers transparent pricing starting with a Standalone plan at $69/month (or ¥499/month). All plans include the full suite of 23 AI agents, local encrypted storage, and BYOM support. Team and Enterprise plans add collaboration features, ERP integration, and private deployment options.', zh: 'KAUP 定价透明，从单机版 $69/月（¥499/月）起步。所有方案均包含完整 23 个 AI Agent、本地加密存储和 BYOM 支持。团队版和企业版额外提供协作功能、ERP 集成及私有部署方案。' },
       'footer.brand': {
         en: 'AI Agent platform purpose-built for international trade. Local-First architecture, end-to-end encryption, and designed for real trade workflows.',
         zh: '为国际贸易深度定制的 AI Agent 平台。Local-First 架构，端到端加密，为真实外贸场景而设计。'
@@ -1818,6 +1910,20 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
         });
       });
     })();
+
+    // ── FAQ Accordion ──
+    (function () {
+      document.querySelectorAll('.faq-q').forEach(function (q) {
+        q.addEventListener('click', function () {
+          var item = q.parentElement;
+          var wasOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+            openItem.classList.remove('open');
+          });
+          if (!wasOpen) item.classList.add('open');
+        });
+      });
+    })();
   </script>
 
   <script type="application/ld+json">
@@ -1829,7 +1935,7 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
         "@id": "https://kaup.ai/#organization",
         "name": "KAUP",
         "url": "https://kaup.ai",
-        "logo": "https://kaup.ai/logo.svg",
+        "logo": "https://kaup.ai/apple-touch-icon.png",
         "description": "AI Agent platform purpose-built for international trade. Local-First architecture, end-to-end encryption.",
         "sameAs": []
       },
@@ -1847,11 +1953,24 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
         }
       },
       {
+        "@type": "BreadcrumbList",
+        "@id": "https://kaup.ai/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kaup.ai/"
+          }
+        ]
+      },
+      {
         "@type": "SoftwareApplication",
         "name": "KAUP Platform",
         "operatingSystem": "Windows, macOS, Linux",
         "applicationCategory": "BusinessApplication",
         "description": "AI Agent platform for international trade with 23 specialized agents, local-first data architecture, and offline capabilities.",
+        "publisher": { "@id": "https://kaup.ai/#organization" },
         "offers": [
           {
             "@type": "Offer",
@@ -1883,6 +2002,59 @@ results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
           "WeChat Work and WhatsApp integration",
           "ERP integration",
           "Browser automation"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is KAUP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "KAUP is a Local-First AI Agent platform purpose-built for international trade. It provides 23 specialized AI agents that cover the entire trade lifecycle — from prospect discovery and outreach to order management and logistics — all while keeping your customer data encrypted and stored locally on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does KAUP protect my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Customer data resides in your local encrypted SQLite database — physically isolated from the cloud. 13 of the 23 agents run entirely on your device without internet. Compliance is structural, not contractual. Your data never leaves your device unless you explicitly choose to sync."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does KAUP work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 13 local agents function without internet connectivity — on flights, at factories, at trade shows. Your workflow continues uninterrupted. The remaining 10 cloud agents handle external data lookups when connectivity is available."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Bring Your Own Model mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BYOM means you connect your own LLM API key (OpenAI, Anthropic, DeepSeek, etc.) and the key is encrypted and stored locally on your device via the OS keychain. KAUP charges zero platform inference costs — you only pay your LLM provider directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which integrations does KAUP support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "KAUP offers desktop-native integrations with WeChat Work, WhatsApp, browser automation, and ERP systems. These are system-level connections that browser-based SaaS platforms fundamentally cannot replicate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "KAUP offers transparent pricing starting with a Standalone plan at $69/month (or ¥499/month). All plans include the full suite of 23 AI agents, local encrypted storage, and BYOM support."
+            }
+          }
         ]
       }
     ]
