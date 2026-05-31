@@ -1,0 +1,50 @@
+# KAUP
+> AI Agent Platform for International Trade
+
+KAUP is a Local-First AI Agent platform purpose-built for international trade businesses. 23 specialized agents covering the entire trade lifecycle — from prospect discovery to order fulfillment.
+
+## What KAUP Does
+
+KAUP provides AI agents that automate and orchestrate the full international trade workflow: lead search, outreach, qualification, order management, logistics coordination, and customer relationship management. Customer data is stored locally in encrypted SQLite, physically isolated from the cloud.
+
+## Core Capabilities
+
+- **23 Trade-Specialized Agents**: 13 local agents + 10 cloud agents, each purpose-built for a specific trade task
+- **Data Sovereignty**: Customer data stored in local encrypted SQLite database, physically isolated from the cloud
+- **Native System Integration**: Desktop-native browser automation, WeChat Work, WhatsApp, and ERP integration
+- **Offline Operation**: 13 local agents function without internet connectivity
+- **BYOM (Bring Your Own Model)**: Connect your own LLM API key, zero platform inference cost
+- **End-to-End Workflow**: 40 business modules spanning sales, marketing, operations, logistics, and management
+
+## Architecture
+
+Local-First desktop application built on Tauri 2.x. A local Agent Runtime processes tasks on-device; a Cloud Agent Engine handles external data sources. Data never leaves the device unless the user explicitly enables sync.
+
+## Pricing
+
+| Tier | Price | Users | Key Features |
+|------|-------|-------|-------------|
+| Standalone | ¥499/mo ($69) | 1–2 | All 23 agents, local storage, BYOM, WhatsApp |
+| Team | ¥1,299/mo ($179) | Up to 15 | + WeChat Work API, ERP integration |
+| Enterprise | ¥2,499+/mo ($349+) | Unlimited | + Docker private deployment, dedicated training |
+
+## Product Line
+
+- **KAUP Desktop** (Tauri 2.x) — Local-First desktop application
+- **KAUP Engine** — Agent orchestration runtime
+- **KAUP Team Server** — Team collaboration and sync
+- **KAUP API** — Programmatic access to agents
+
+## Company
+
+- **Name**: KAUP (智御无疆)
+- **URL**: https://kaup.ai
+- **Etymology**: From Old Norse "kaup" — to trade, to buy. Named after Kaupang, the first Nordic trade town founded in 780 AD.
+
+## Technical Stack
+
+- **Runtime**: Tauri 2.x (Rust + WebView)
+- **Agent Framework**: Custom multi-agent orchestration
+- **Storage**: Local encrypted SQLite
+- **LLM**: User-provided API keys (OpenAI, Anthropic, local models, etc.)
+- **Integrations**: WeChat Work API, WhatsApp Business API, ERP systems, browser automation

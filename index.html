@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KAUP — AI Agent Platform for Developers</title>
-  <meta name="description" content="KAUP is the developer-first platform for building, deploying, and scaling AI agents. From simple automations to complex multi-agent systems.">
-  <meta property="og:title" content="KAUP — AI Agent Platform">
-  <meta property="og:description" content="Build, deploy, and scale intelligent AI agents. Developer-first platform with multi-model support, tool integration, and real-time monitoring.">
+  <title data-i18n="meta.title">KAUP — AI Agent Platform for Global Trade</title>
+  <meta name="description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform purpose-built for international trade. 23 specialized agents, data stored locally, works offline.">
+  <meta property="og:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
+  <meta property="og:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform for international trade businesses. 23 specialized agents covering the full trade workflow.">
   <meta property="og:url" content="https://kaup.ai">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KAUP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KAUP — AI Agent Platform">
-  <meta name="twitter:description" content="Build, deploy, and scale intelligent AI agents. Developer-first platform.">
+  <meta name="twitter:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
+  <meta name="twitter:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform for international trade businesses. 23 specialized agents covering the full trade workflow.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="canonical" href="https://kaup.ai/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="KAUP">
+  <meta name="theme-color" content="#101010">
+
+  <!-- Alternate languages for hreflang -->
+  <link rel="alternate" hreflang="zh-CN" href="https://kaup.ai/">
+  <link rel="alternate" hreflang="en" href="https://kaup.ai/">
+  <link rel="alternate" hreflang="x-default" href="https://kaup.ai/">
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
+  <meta property="og:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform purpose-built for international trade. 23 specialized agents, data stored locally, works offline.">
+  <meta property="og:url" content="https://kaup.ai">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KAUP">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://kaup.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KAUP — AI Agent Platform for Global Trade">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n="meta.title" content="KAUP — AI Agent Platform for Global Trade">
+  <meta name="twitter:description" data-i18n="meta.description" content="KAUP is a Local-First AI Agent platform purpose-built for international trade. 23 specialized agents, data stored locally, works offline.">
+  <meta name="twitter:image" content="https://kaup.ai/og-image.png">
+  <meta name="twitter:image:alt" content="KAUP — AI Agent Platform for Global Trade">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -502,6 +535,27 @@
     .mobile-menu-cta .btn { width: 100%; }
 
     /* ═══════════════════════════════════════════════════════
+       LANG TOGGLE
+       ═══════════════════════════════════════════════════════ */
+    .lang-toggle {
+      font-family: var(--ff-mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--mute);
+      background: none;
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-pill);
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .lang-toggle:hover {
+      color: var(--ink);
+      border-color: var(--hairline-soft);
+    }
+
+    /* ═══════════════════════════════════════════════════════
        HERO
        ═══════════════════════════════════════════════════════ */
     .hero {
@@ -645,7 +699,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════
-       DEVELOPER SECTION
+       HOW IT WORKS SECTION
        ═══════════════════════════════════════════════════════ */
     .dev-section-grid {
       display: grid;
@@ -1068,14 +1122,15 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#developers" class="nav-link">Developers</a></li>
-        <li><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="#" class="nav-link">Blog</a></li>
+        <li><a href="#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link" data-i18n="nav.howItWorks">How It Works</a></li>
+        <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+        <li><button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button></li>
       </ul>
 
       <div class="nav-cta">
-        <a href="#cta" class="btn btn-primary nav-cta-desktop">Get Started</a>
+        <a href="#cta" class="btn btn-primary nav-cta-desktop" data-i18n="nav.getStarted">Get Started</a>
         <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger-btn">
           <span></span>
           <span></span>
@@ -1097,13 +1152,14 @@
       <button class="mobile-menu-close" aria-label="Close menu" id="mobile-close-btn">&times;</button>
     </div>
     <ul class="mobile-menu-links">
-      <li><a href="#features" class="mobile-link">Features</a></li>
-      <li><a href="#developers" class="mobile-link">Developers</a></li>
-      <li><a href="#pricing" class="mobile-link">Pricing</a></li>
-      <li><a href="#" class="mobile-link">Blog</a></li>
+      <li><a href="#features" class="mobile-link" data-i18n="nav.features">Features</a></li>
+      <li><a href="#how-it-works" class="mobile-link" data-i18n="nav.howItWorks">How It Works</a></li>
+      <li><a href="#pricing" class="mobile-link" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="#" class="mobile-link" data-i18n="nav.blog">Blog</a></li>
+      <li><button class="lang-toggle" id="lang-toggle-mobile" aria-label="Toggle language">EN</button></li>
     </ul>
     <div class="mobile-menu-cta">
-      <a href="#cta" class="btn btn-primary">Get Started</a>
+      <a href="#cta" class="btn btn-primary" data-i18n="nav.getStarted">Get Started</a>
     </div>
   </div>
 
@@ -1112,14 +1168,14 @@
        ═══════════════════════════════════════════════════════ -->
   <section class="hero" id="hero">
     <div class="container">
-      <p class="eyebrow-mono">AI AGENT PLATFORM</p>
+      <p class="eyebrow-mono" data-i18n="hero.eyebrow">AI AGENT PLATFORM FOR TRADE</p>
       <p class="hero-runic" aria-label="KAUP in Runic">ᚴᛆᚢᛕ</p>
-      <h1 class="display-xl">Build Intelligent Agents<br>That Work For You</h1>
-      <p class="body-lg">KAUP is the developer-first platform for building, deploying, and scaling AI agents. From simple automations to complex multi-agent systems.</p>
+      <h1 class="display-xl" data-i18n="hero.h1">AI Agents That<br>Drive Global Trade</h1>
+      <p class="body-lg" data-i18n="hero.body">23 specialized AI agents covering the entire trade lifecycle — from prospect discovery to order fulfillment. All customer data remains on your device, encrypted and physically isolated from the cloud.</p>
 
       <div class="hero-buttons">
-        <a href="#cta" class="btn btn-primary">Get Started Free</a>
-        <a href="#" class="btn btn-outline">View Documentation</a>
+        <a href="#cta" class="btn btn-primary" data-i18n="hero.cta">Get Started Free</a>
+        <a href="#" class="btn btn-outline" data-i18n="hero.docs">View Documentation</a>
       </div>
 
       <div class="hero-code">
@@ -1130,16 +1186,22 @@
             </div>
             <button class="code-mockup-copy" data-target="hero-code">Copy</button>
           </div>
-          <pre><span class="kw">import</span> { <span class="fn">Agent</span> } <span class="kw">from</span> <span class="str">"@kaup/sdk"</span>
+          <pre><span class="kw">from</span> <span class="fn">kaup</span> <span class="kw">import</span> <span class="fn">Agent</span>, <span class="fn">tool</span>
 
-<span class="kw">const</span> agent <span class="op">=</span> <span class="kw">new</span> <span class="fn">Agent</span>({
-  <span class="prop">name</span>: <span class="str">"support-bot"</span>,
-  <span class="prop">model</span>: <span class="str">"gpt-4"</span>,
-  <span class="prop">tools</span>: [<span class="str">"search"</span>, <span class="str">"escalate"</span>],
-  <span class="prop">instructions</span>: <span class="str">"Help customers resolve issues..."</span>
-})
+lead_agent <span class="op">=</span> <span class="fn">Agent</span>(
+    <span class="prop">name</span><span class="op">=</span><span class="str">"lead-search"</span>,
+    <span class="prop">tools</span><span class="op">=</span>[<span class="str">"google"</span>, <span class="str">"linkedin"</span>, <span class="str">"customs_db"</span>],
+    <span class="prop">instructions</span><span class="op">=</span><span class="str">"Find buyers for LED lighting in Europe..."</span>
+)
 
-agent.<span class="fn">deploy</span>()</pre>
+<span class="cm"># Search for qualified leads</span>
+results <span class="op">=</span> lead_agent.<span class="fn">run</span>(
+    <span class="str">"Find European LED lighting importers "</span>
+    <span class="str">"with annual revenue > $1M"</span>
+)
+
+<span class="kw">for</span> lead <span class="kw">in</span> results.<span class="fn">top</span>(<span class="num">10</span>):
+    lead_agent.<span class="fn">reach_out</span>(lead, <span class="prop">style</span><span class="op">=</span><span class="str">"personalized"</span>)</pre>
         </div>
       </div>
     </div>
@@ -1154,63 +1216,63 @@ agent.<span class="fn">deploy</span>()</pre>
   <section class="section" id="features">
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow-mono">CAPABILITIES</p>
-        <h2 class="display-lg">Everything You Need to<br>Build AI Agents</h2>
+        <p class="eyebrow-mono" data-i18n="features.eyebrow">CORE CAPABILITIES</p>
+        <h2 class="display-lg" data-i18n="features.heading">Purpose-Built for<br>International Trade</h2>
       </div>
 
       <div class="feature-grid">
-        <!-- Multi-Model Support -->
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 class="display-sm">Multi-Model Support</h3>
-          <p class="body-md">Connect to GPT-4, Claude, Gemini, and open-source models. Switch seamlessly without code changes.</p>
-        </div>
-
-        <!-- Tool Integration -->
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 class="display-sm">Tool Integration</h3>
-          <p class="body-md">Give your agents superpowers with built-in tools for search, code execution, API calls, and database queries.</p>
-        </div>
-
-        <!-- Agent Orchestration -->
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M5.64 5.64l2.83 2.83"/><path d="M15.54 15.54l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/><path d="M5.64 18.36l2.83-2.83"/><path d="M15.54 8.46l2.83-2.83"/></svg>
-          </div>
-          <h3 class="display-sm">Agent Orchestration</h3>
-          <p class="body-md">Coordinate multiple agents working together. Define workflows, handoffs, and escalation paths.</p>
-        </div>
-
-        <!-- Real-Time Monitoring -->
-        <div class="card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h3 class="display-sm">Real-Time Monitoring</h3>
-          <p class="body-md">Track agent performance with live dashboards. Debug conversations, measure latency, and optimize costs.</p>
-        </div>
-
-        <!-- Secure Deployment -->
+        <!-- Data Security First -->
         <div class="card feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="display-sm">Secure Deployment</h3>
-          <p class="body-md">Enterprise-grade security with guardrails, rate limits, content filtering, and audit logging.</p>
+          <h3 class="display-sm" data-i18n="features.f1.title">Data Sovereignty by Design</h3>
+          <p class="body-md" data-i18n="features.f1.desc">Customer data resides in your local encrypted SQLite database — physically isolated from the cloud. Compliance is structural, not contractual.</p>
         </div>
 
-        <!-- Scale -->
+        <!-- 23 Specialized Agents -->
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="display-sm" data-i18n="features.f2.title">23 Trade-Specialized Agents</h3>
+          <p class="body-md" data-i18n="features.f2.desc">13 local agents and 10 cloud agents, each purpose-built for a specific trade task — prospecting, outreach, qualification, order management, and beyond.</p>
+        </div>
+
+        <!-- System-Level Power -->
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="display-sm" data-i18n="features.f3.title">Native System Integration</h3>
+          <p class="body-md" data-i18n="features.f3.desc">Desktop-native access to browser automation, WeChat Work, WhatsApp, and ERP systems — capabilities fundamentally unavailable to browser-based SaaS.</p>
+        </div>
+
+        <!-- Works Offline -->
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="display-sm" data-i18n="features.f4.title">Fully Operational Offline</h3>
+          <p class="body-md" data-i18n="features.f4.desc">13 local agents function without internet connectivity — on flights, at factories, at trade shows. Your workflow continues uninterrupted.</p>
+        </div>
+
+        <!-- BYOM -->
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="display-sm" data-i18n="features.f5.title">Bring Your Own Model</h3>
+          <p class="body-md" data-i18n="features.f5.desc">Connect your own LLM API key. Encrypted on-device storage. Zero platform inference cost. Full model autonomy.</p>
+        </div>
+
+        <!-- Full Workflow -->
         <div class="card feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
-          <h3 class="display-sm">Scale to Zero → Millions</h3>
-          <p class="body-md">Serverless infrastructure that scales automatically. Pay only for what you use.</p>
+          <h3 class="display-sm" data-i18n="features.f6.title">End-to-End Workflow</h3>
+          <p class="body-md" data-i18n="features.f6.desc">40 business modules spanning sales, marketing, operations, logistics, and management — every role in your trade organization.</p>
         </div>
       </div>
     </div>
@@ -1220,22 +1282,22 @@ agent.<span class="fn">deploy</span>()</pre>
   <div class="container"><hr class="dashed-divider"></div>
 
   <!-- ═══════════════════════════════════════════════════════
-       DEVELOPER EXPERIENCE
+       HOW IT WORKS
        ═══════════════════════════════════════════════════════ -->
-  <section class="section" id="developers">
+  <section class="section" id="how-it-works">
     <div class="container">
       <div class="dev-section-grid">
         <div class="dev-section-text">
-          <p class="eyebrow-mono">DEVELOPER FIRST</p>
-          <h2 class="display-lg">Ship Agents in Minutes,<br>Not Months</h2>
-          <p class="body-lg">The KAUP SDK gives you everything you need to build production-ready agents with a few lines of code. Type-safe, well-documented, and designed for real-world use.</p>
+          <p class="eyebrow-mono" data-i18n="hiw.eyebrow">ARCHITECTURE</p>
+          <h2 class="display-lg" data-i18n="hiw.heading">From Viking Ports<br>to AI Agents</h2>
+          <p class="body-lg" data-i18n="hiw.body">'Kaup' originates from Old Norse — the language of Viking traders who founded Kaupang, the first Nordic trade town, in 780 AD. Twelve centuries later, the same word names a new paradigm in trade: AI Agents executing what once required entire teams.</p>
 
           <div class="install-row">
             <span class="body-sm">Install with</span>
             <code class="code-chip">npm install @kaup/sdk</code>
           </div>
 
-          <p class="body-md">Stream responses in real-time, define custom tools with TypeScript, and deploy to KAUP's managed infrastructure with a single command. Full observability built in.</p>
+          <p class="body-md" data-i18n="hiw.body2">Local-First Desktop App built on Tauri 2.x. A local Agent Runtime processes tasks on your machine; a Cloud Agent Engine handles external data sources. Your data never leaves your device unless you explicitly choose to sync.</p>
         </div>
 
         <div>
@@ -1249,25 +1311,26 @@ agent.<span class="fn">deploy</span>()</pre>
             <pre><span class="kw">import</span> { <span class="fn">Agent</span>, <span class="fn">tool</span> } <span class="kw">from</span> <span class="str">"@kaup/sdk"</span>
 
 <span class="kw">const</span> searchWeb <span class="op">=</span> <span class="fn">tool</span>({
-  <span class="prop">name</span>: <span class="str">"search_web"</span>,
-  <span class="prop">description</span>: <span class="str">"Search the web"</span>,
+  <span class="prop">name</span>: <span class="str">"search_buyers"</span>,
+  <span class="prop">description</span>: <span class="str">"Search for potential buyers"</span>,
   <span class="prop">parameters</span>: z.<span class="fn">object</span>({
-    <span class="prop">query</span>: z.<span class="fn">string</span>()
+    <span class="prop">product</span>: z.<span class="fn">string</span>(),
+    <span class="prop">region</span>: z.<span class="fn">string</span>()
   }),
-  <span class="prop">execute</span>: <span class="kw">async</span> ({ query }) <span class="op">=></span> {
-    <span class="kw">return</span> <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">`/search?q=${query}`</span>)
+  <span class="prop">execute</span>: <span class="kw">async</span> ({ product, region }) <span class="op">=></span> {
+    <span class="kw">return</span> <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">`/search?q=${product}+buyers+${region}`</span>)
   }
 })
 
 <span class="kw">const</span> agent <span class="op">=</span> <span class="kw">new</span> <span class="fn">Agent</span>({
-  <span class="prop">name</span>: <span class="str">"research-agent"</span>,
-  <span class="prop">model</span>: <span class="str">"gpt-4"</span>,
+  <span class="prop">name</span>: <span class="str">"outreach-agent"</span>,
+  <span class="prop">model</span>: <span class="str">"your-api-key"</span>,  <span class="cm">// BYOM</span>
   <span class="prop">tools</span>: [searchWeb],
   <span class="prop">stream</span>: <span class="num">true</span>
 })
 
-<span class="cm">// Stream responses in real-time</span>
-<span class="kw">for await</span> (<span class="kw">const</span> chunk <span class="kw">of</span> agent.<span class="fn">run</span>(<span class="str">"Latest AI news"</span>)) {
+<span class="cm">// Your data never leaves your machine</span>
+<span class="kw">for await</span> (<span class="kw">const</span> chunk <span class="kw">of</span> agent.<span class="fn">run</span>(<span class="str">"Find EU LED buyers"</span>)) {
   process.stdout.<span class="fn">write</span>(chunk)
 }</pre>
           </div>
@@ -1286,20 +1349,20 @@ agent.<span class="fn">deploy</span>()</pre>
     <div class="container">
       <div class="metrics-grid">
         <div class="metric-card">
-          <div class="metric-value">10K+</div>
-          <div class="metric-label">Agents Deployed</div>
+          <div class="metric-value">23</div>
+          <div class="metric-label" data-i18n="metrics.agents">Specialized Agents</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">99.9%</div>
-          <div class="metric-label">Uptime SLA</div>
+          <div class="metric-value">40+</div>
+          <div class="metric-label" data-i18n="metrics.modules">Business Modules</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">&lt;50ms</div>
-          <div class="metric-label">Avg Latency</div>
+          <div class="metric-value">100%</div>
+          <div class="metric-label" data-i18n="metrics.local">Data On-Premise</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">500+</div>
-          <div class="metric-label">Integrations</div>
+          <div class="metric-value">0</div>
+          <div class="metric-label" data-i18n="metrics.cost">Platform LLM Cost</div>
         </div>
       </div>
     </div>
@@ -1314,59 +1377,65 @@ agent.<span class="fn">deploy</span>()</pre>
   <section class="section" id="pricing">
     <div class="container">
       <div class="section-header">
-        <p class="eyebrow-mono">PRICING</p>
-        <h2 class="display-lg">Simple, Transparent Pricing</h2>
-        <p class="body-lg">Start free. Scale as you grow. No surprises.</p>
+        <p class="eyebrow-mono" data-i18n="pricing.eyebrow">PRICING</p>
+        <h2 class="display-lg" data-i18n="pricing.heading">Transparent Pricing,<br>Predictable Costs</h2>
+        <p class="body-lg" data-i18n="pricing.sub">Start free, scale on your terms. No hidden fees.</p>
       </div>
 
       <div class="pricing-grid">
-        <!-- Starter -->
+        <!-- L1 单机版 -->
         <div class="pricing-card">
-          <div class="pricing-tier-name">Starter</div>
-          <div class="pricing-price">Free</div>
-          <div class="pricing-period">No credit card required</div>
+          <div class="pricing-tier-name" data-i18n="pricing.l1.name">Standalone</div>
+          <div class="pricing-price" data-i18n="pricing.l1.price"><span class="currency">$</span>69</div>
+          <div class="pricing-period" data-i18n="pricing.l1.period">per month</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> 1,000 requests / month</li>
-            <li><span class="check">✓</span> 1 agent</li>
-            <li><span class="check">✓</span> Community support</li>
-            <li><span class="check">✓</span> Basic monitoring</li>
-            <li><span class="check">✓</span> Public models</li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.desc">~5 lead searches/mo + unlimited AI operations</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.f1">1–2 users</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.f2">All 23 agents</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.f3">Local encrypted storage</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.f4">BYOM — bring your own model</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l1.f5">WhatsApp integration</span></li>
           </ul>
-          <a href="#cta" class="btn btn-outline">Get Started</a>
+          <a href="#cta" class="btn btn-outline" data-i18n="pricing.l1.btn">Get Started</a>
         </div>
 
-        <!-- Pro — Featured -->
+        <!-- L2 团队版 — Featured -->
         <div class="pricing-card featured">
-          <div class="pricing-tier-name">Pro</div>
-          <span class="pricing-badge">Most Popular</span>
-          <div class="pricing-price"><span class="currency">$</span>49</div>
-          <div class="pricing-period">per month</div>
+          <div class="pricing-tier-name" data-i18n="pricing.l2.name">Team</div>
+          <span class="pricing-badge" data-i18n="pricing.l2.badge">Most Popular</span>
+          <div class="pricing-price" data-i18n="pricing.l2.price"><span class="currency">$</span>179</div>
+          <div class="pricing-period" data-i18n="pricing.l2.period">per month</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> 100,000 requests / month</li>
-            <li><span class="check">✓</span> 10 agents</li>
-            <li><span class="check">✓</span> Priority support</li>
-            <li><span class="check">✓</span> Advanced analytics</li>
-            <li><span class="check">✓</span> Custom tools</li>
-            <li><span class="check">✓</span> Streaming responses</li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.desc">~15 lead searches/mo + team collaboration</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f1">All 23 agents</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f2">Local encrypted storage</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f3">BYOM — bring your own model</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f4">WeChat Work API</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f5">WhatsApp integration</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f6">ERP integration</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l2.f7">Up to 15 users</span></li>
           </ul>
-          <a href="#cta" class="btn btn-primary">Get Started</a>
+          <a href="#cta" class="btn btn-primary" data-i18n="pricing.l2.btn">Get Started</a>
         </div>
 
-        <!-- Enterprise -->
+        <!-- L3 企业版 -->
         <div class="pricing-card">
-          <div class="pricing-tier-name">Enterprise</div>
-          <div class="pricing-price">Custom</div>
-          <div class="pricing-period">Contact us for pricing</div>
+          <div class="pricing-tier-name" data-i18n="pricing.l3.name">Enterprise</div>
+          <div class="pricing-price" data-i18n="pricing.l3.price"><span class="currency">$</span>349+</div>
+          <div class="pricing-period" data-i18n="pricing.l3.period">per month</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Unlimited requests</li>
-            <li><span class="check">✓</span> Unlimited agents</li>
-            <li><span class="check">✓</span> Dedicated support</li>
-            <li><span class="check">✓</span> 99.99% SLA</li>
-            <li><span class="check">✓</span> SSO &amp; SAML</li>
-            <li><span class="check">✓</span> On-premise deployment</li>
-            <li><span class="check">✓</span> Custom integrations</li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.desc">~50 lead searches/mo + dedicated support</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f1">All 23 agents</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f2">Local encrypted storage</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f3">BYOM — bring your own model</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f4">WeChat Work API</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f5">WhatsApp integration</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f6">ERP integration</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f7">Docker private deployment</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f8">Unlimited users</span></li>
+            <li><span class="check">✓</span><span data-i18n="pricing.l3.f9">Dedicated training</span></li>
           </ul>
-          <a href="#" class="btn btn-outline">Talk to Sales</a>
+          <a href="#" class="btn btn-outline" data-i18n="pricing.l3.btn">Contact Sales</a>
         </div>
       </div>
     </div>
@@ -1380,11 +1449,11 @@ agent.<span class="fn">deploy</span>()</pre>
        ═══════════════════════════════════════════════════════ -->
   <section class="cta-section" id="cta">
     <div class="container">
-      <h2 class="display-lg">Ready to Build Your<br>First Agent?</h2>
-      <p class="body-lg">Start free. No credit card required.</p>
+      <h2 class="display-lg" data-i18n="cta.heading">Build Your AI-Powered<br>Trade Team</h2>
+      <p class="body-lg" data-i18n="cta.body">Start free. Your data stays on your device.</p>
       <div class="cta-buttons">
-        <a href="#" class="btn btn-primary">Get Started Now</a>
-        <a href="#" class="btn btn-ghost-green">Talk to Sales</a>
+        <a href="#" class="btn btn-primary" data-i18n="cta.primary">Get Started Now</a>
+        <a href="#" class="btn btn-ghost-green" data-i18n="cta.secondary">Contact Sales</a>
       </div>
     </div>
   </section>
@@ -1402,51 +1471,51 @@ agent.<span class="fn">deploy</span>()</pre>
             </a>
             <span class="footer-runic">ᚴᛆᚢᛕ</span>
           </div>
-          <p>The developer-first platform for building, deploying, and scaling AI agents.</p>
+          <p data-i18n="footer.brand">AI Agent platform purpose-built for international trade. Local-First architecture, end-to-end encryption, and designed for real trade workflows.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Product</h4>
+          <h4 data-i18n="footer.product">Product</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#">Changelog</a></li>
-            <li><a href="#">Roadmap</a></li>
+            <li><a href="#features" data-i18n="footer.product.f1">Features</a></li>
+            <li><a href="#pricing" data-i18n="footer.product.f2">Pricing</a></li>
+            <li><a href="#" data-i18n="footer.product.f3">Changelog</a></li>
+            <li><a href="#" data-i18n="footer.product.f4">Roadmap</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Developers</h4>
+          <h4 data-i18n="footer.developers">Developers</h4>
           <ul>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
-            <li><a href="#">SDK</a></li>
-            <li><a href="#">Examples</a></li>
+            <li><a href="#" data-i18n="footer.dev.f1">Documentation</a></li>
+            <li><a href="#" data-i18n="footer.dev.f2">API Reference</a></li>
+            <li><a href="#" data-i18n="footer.dev.f3">SDK</a></li>
+            <li><a href="#" data-i18n="footer.dev.f4">Examples</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="footer.company">Company</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-i18n="footer.co.f1">About</a></li>
+            <li><a href="#" data-i18n="footer.co.f2">Blog</a></li>
+            <li><a href="#" data-i18n="footer.co.f3">Careers</a></li>
+            <li><a href="#" data-i18n="footer.co.f4">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4 data-i18n="footer.legal">Legal</h4>
           <ul>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Security</a></li>
+            <li><a href="#" data-i18n="footer.legal.f1">Privacy</a></li>
+            <li><a href="#" data-i18n="footer.legal.f2">Terms</a></li>
+            <li><a href="#" data-i18n="footer.legal.f3">Security</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 KAUP. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 KAUP. All rights reserved.</p>
         <div class="footer-socials">
           <!-- GitHub -->
           <a href="#" aria-label="GitHub">
@@ -1469,13 +1538,194 @@ agent.<span class="fn">deploy</span>()</pre>
        JAVASCRIPT
        ═══════════════════════════════════════════════════════ -->
   <script>
+    // ── i18n System ──
+    var i18n = {
+      'meta.title': {
+        en: 'KAUP — AI Agent Platform for Global Trade',
+        zh: 'KAUP — 外贸 AI Agent 智能平台'
+      },
+      'meta.description': {
+        en: 'KAUP is a Local-First AI Agent platform purpose-built for international trade. 23 specialized agents, data stored locally, works offline.',
+        zh: 'KAUP 是面向外贸行业的 Local-First AI Agent 平台，预置 23 个专业 Agent 覆盖外贸全流程，数据本地加密存储，离线可用。'
+      },
+      'nav.features': { en: 'Features', zh: '功能' },
+      'nav.howItWorks': { en: 'How It Works', zh: '产品架构' },
+      'nav.pricing': { en: 'Pricing', zh: '定价' },
+      'nav.blog': { en: 'Blog', zh: '博客' },
+      'nav.getStarted': { en: 'Get Started', zh: '开始使用' },
+      'hero.eyebrow': { en: 'AI AGENT PLATFORM FOR TRADE', zh: '外贸 AI Agent 平台' },
+      'hero.h1': { en: 'AI Agents That<br>Drive Global Trade', zh: 'AI 智能体<br>驱动全球贸易' },
+      'hero.body': {
+        en: '23 specialized AI agents covering the entire trade lifecycle — from prospect discovery to order fulfillment. All customer data remains on your device, encrypted and physically isolated from the cloud.',
+        zh: '23 个专业 AI Agent 覆盖外贸全生命周期——从客户发现到订单交付。客户数据始终存储于本地加密数据库，与云端物理隔离。'
+      },
+      'hero.cta': { en: 'Get Started Free', zh: '免费体验' },
+      'hero.docs': { en: 'View Documentation', zh: '查阅文档' },
+      'features.eyebrow': { en: 'CORE CAPABILITIES', zh: '核心能力' },
+      'features.heading': { en: 'Purpose-Built for<br>International Trade', zh: '为国际贸易<br>深度定制' },
+      'features.f1.title': { en: 'Data Sovereignty by Design', zh: '数据主权，架构先行' },
+      'features.f1.desc': {
+        en: 'Customer data resides in your local encrypted SQLite database — physically isolated from the cloud. Compliance is structural, not contractual.',
+        zh: '客户数据存储于本地加密 SQLite 数据库，与云端物理隔离。合规是架构层面的保障，而非一纸承诺。'
+      },
+      'features.f2.title': { en: '23 Trade-Specialized Agents', zh: '23 个外贸专业 Agent' },
+      'features.f2.desc': {
+        en: '13 local agents and 10 cloud agents, each purpose-built for a specific trade task — prospecting, outreach, qualification, order management, and beyond.',
+        zh: '13 个本地 Agent 与 10 个云端 Agent 协同运作，各自针对特定外贸环节深度优化——获客、触达、资信调查、订单管理，全面覆盖。'
+      },
+      'features.f3.title': { en: 'Native System Integration', zh: '系统级原生集成' },
+      'features.f3.desc': {
+        en: 'Desktop-native access to browser automation, WeChat Work, WhatsApp, and ERP systems — capabilities fundamentally unavailable to browser-based SaaS.',
+        zh: '桌面级原生能力：浏览器自动化、企业微信、WhatsApp、ERP 直连——基于浏览器的 SaaS 架构无法实现。'
+      },
+      'features.f4.title': { en: 'Fully Operational Offline', zh: '离线环境，完整可用' },
+      'features.f4.desc': {
+        en: '13 local agents function without internet connectivity — on flights, at factories, at trade shows. Your workflow continues uninterrupted.',
+        zh: '13 个本地 Agent 无需网络即可运行——飞机上、工厂里、展会中，业务流程不中断。'
+      },
+      'features.f5.title': { en: 'Bring Your Own Model', zh: '自带模型 (BYOM)' },
+      'features.f5.desc': {
+        en: 'Connect your own LLM API key. Encrypted on-device storage. Zero platform inference cost. Full model autonomy.',
+        zh: '接入自有 LLM API Key，密钥加密存储于本地操作系统密钥链。平台零推理成本，模型选择权完全归属用户。'
+      },
+      'features.f6.title': { en: 'End-to-End Workflow', zh: '端到端业务覆盖' },
+      'features.f6.desc': {
+        en: '40 business modules spanning sales, marketing, operations, logistics, and management — every role in your trade organization.',
+        zh: '40 个业务模块贯穿业务拓展、市场营销、运营管理、物流履约与经营管理——覆盖外贸企业全部职能角色。'
+      },
+      'hiw.eyebrow': { en: 'ARCHITECTURE', zh: '产品架构' },
+      'hiw.heading': { en: 'From Viking Ports<br>to AI Agents', zh: '从峡湾到云端' },
+      'hiw.body': {
+        en: '\'Kaup\' originates from Old Norse — the language of Viking traders who founded Kaupang, the first Nordic trade town, in 780 AD. Twelve centuries later, the same word names a new paradigm in trade: AI Agents executing what once required entire teams.',
+        zh: '"Kaup"源自古诺尔斯语——公元 780 年，维京商人在挪威峡湾建立了第一个北欧贸易城镇 Kaupang。十二个世纪后的今天，同一个词开启了一种全新的贸易范式：AI Agent 执行过去需要整个团队协作才能完成的贸易流程。'
+      },
+      'hiw.body2': {
+        en: 'Local-First Desktop App built on Tauri 2.x. A local Agent Runtime processes tasks on your machine; a Cloud Agent Engine handles external data sources. Your data never leaves your device unless you explicitly choose to sync.',
+        zh: '基于 Tauri 2.x 构建的 Local-First 桌面应用。本地 Agent Runtime 在你的设备上处理任务，云端 Agent Engine 对接外部数据源。除非你主动启用同步，数据不会离开你的设备。'
+      },
+      'metrics.agents': { en: 'Specialized Agents', zh: '专业 Agent' },
+      'metrics.modules': { en: 'Business Modules', zh: '业务模块' },
+      'metrics.local': { en: 'Data On-Premise', zh: '数据本地化' },
+      'metrics.cost': { en: 'Platform LLM Cost', zh: '平台推理成本' },
+      'pricing.eyebrow': { en: 'PRICING', zh: '定价方案' },
+      'pricing.heading': { en: 'Transparent Pricing,<br>Predictable Costs', zh: '定价透明，<br>成本可控' },
+      'pricing.sub': { en: 'Start free, scale on your terms. No hidden fees.', zh: '免费起步，按需扩展，无隐藏费用。' },
+      'pricing.l1.name': { en: 'Standalone', zh: '单机版' },
+      'pricing.l1.price': { en: '<span class="currency">$</span>69', zh: '<span class="currency">¥</span>499' },
+      'pricing.l1.period': { en: 'per month', zh: '每月' },
+      'pricing.l1.desc': { en: '~5 lead searches/mo + unlimited AI operations', zh: '每月约 5 次线索搜索 + 不限 AI 操作' },
+      'pricing.l1.f1': { en: '1–2 users', zh: '1–2 人使用' },
+      'pricing.l1.f2': { en: 'All 23 agents', zh: '全部 23 个 Agent' },
+      'pricing.l1.f3': { en: 'Local encrypted storage', zh: '本地加密存储' },
+      'pricing.l1.f4': { en: 'BYOM — bring your own model', zh: 'BYOM 自带模型' },
+      'pricing.l1.f5': { en: 'WhatsApp integration', zh: 'WhatsApp 集成' },
+      'pricing.l1.btn': { en: 'Get Started', zh: '开始使用' },
+      'pricing.l2.name': { en: 'Team', zh: '团队版' },
+      'pricing.l2.badge': { en: 'Most Popular', zh: '最受欢迎' },
+      'pricing.l2.price': { en: '<span class="currency">$</span>179', zh: '<span class="currency">¥</span>1,299' },
+      'pricing.l2.period': { en: 'per month', zh: '每月' },
+      'pricing.l2.desc': { en: '~15 lead searches/mo + team collaboration', zh: '每月约 15 次线索搜索 + 团队协作' },
+      'pricing.l2.f1': { en: 'All 23 agents', zh: '全部 23 个 Agent' },
+      'pricing.l2.f2': { en: 'Local encrypted storage', zh: '本地加密存储' },
+      'pricing.l2.f3': { en: 'BYOM — bring your own model', zh: 'BYOM 自带模型' },
+      'pricing.l2.f4': { en: 'WeChat Work API', zh: '企业微信 API' },
+      'pricing.l2.f5': { en: 'WhatsApp integration', zh: 'WhatsApp 集成' },
+      'pricing.l2.f6': { en: 'ERP integration', zh: 'ERP 直连' },
+      'pricing.l2.f7': { en: 'Up to 15 users', zh: '最多 15 人协作' },
+      'pricing.l2.btn': { en: 'Get Started', zh: '开始使用' },
+      'pricing.l3.name': { en: 'Enterprise', zh: '企业版' },
+      'pricing.l3.price': { en: '<span class="currency">$</span>349+', zh: '<span class="currency">¥</span>2,499+' },
+      'pricing.l3.period': { en: 'per month', zh: '每月' },
+      'pricing.l3.desc': { en: '~50 lead searches/mo + dedicated support', zh: '每月约 50 次线索搜索 + 专属支持' },
+      'pricing.l3.f1': { en: 'All 23 agents', zh: '全部 23 个 Agent' },
+      'pricing.l3.f2': { en: 'Local encrypted storage', zh: '本地加密存储' },
+      'pricing.l3.f3': { en: 'BYOM — bring your own model', zh: 'BYOM 自带模型' },
+      'pricing.l3.f4': { en: 'WeChat Work API', zh: '企业微信 API' },
+      'pricing.l3.f5': { en: 'WhatsApp integration', zh: 'WhatsApp 集成' },
+      'pricing.l3.f6': { en: 'ERP integration', zh: 'ERP 直连' },
+      'pricing.l3.f7': { en: 'Docker private deployment', zh: 'Docker 私有部署' },
+      'pricing.l3.f8': { en: 'Unlimited users', zh: '不限协作人数' },
+      'pricing.l3.f9': { en: 'Dedicated training', zh: '专属培训服务' },
+      'pricing.l3.btn': { en: 'Contact Sales', zh: '联系销售' },
+      'cta.heading': { en: 'Build Your AI-Powered<br>Trade Team', zh: '构建 AI 驱动的<br>外贸团队' },
+      'cta.body': { en: 'Start free. Your data stays on your device.', zh: '免费起步，数据始终属于你。' },
+      'cta.primary': { en: 'Get Started Now', zh: '立即开始' },
+      'cta.secondary': { en: 'Contact Sales', zh: '联系销售' },
+      'footer.brand': {
+        en: 'AI Agent platform purpose-built for international trade. Local-First architecture, end-to-end encryption, and designed for real trade workflows.',
+        zh: '为国际贸易深度定制的 AI Agent 平台。Local-First 架构，端到端加密，为真实外贸场景而设计。'
+      },
+      'footer.product': { en: 'Product', zh: '产品' },
+      'footer.product.f1': { en: 'Features', zh: '功能' },
+      'footer.product.f2': { en: 'Pricing', zh: '定价' },
+      'footer.product.f3': { en: 'Changelog', zh: '更新日志' },
+      'footer.product.f4': { en: 'Roadmap', zh: '路线图' },
+      'footer.developers': { en: 'Developers', zh: '开发者' },
+      'footer.dev.f1': { en: 'Documentation', zh: '技术文档' },
+      'footer.dev.f2': { en: 'API Reference', zh: 'API 参考' },
+      'footer.dev.f3': { en: 'SDK', zh: 'SDK' },
+      'footer.dev.f4': { en: 'Examples', zh: '使用示例' },
+      'footer.company': { en: 'Company', zh: '关于' },
+      'footer.co.f1': { en: 'About', zh: '关于我们' },
+      'footer.co.f2': { en: 'Blog', zh: '博客' },
+      'footer.co.f3': { en: 'Careers', zh: '加入我们' },
+      'footer.co.f4': { en: 'Contact', zh: '联系我们' },
+      'footer.legal': { en: 'Legal', zh: '法律信息' },
+      'footer.legal.f1': { en: 'Privacy', zh: '隐私政策' },
+      'footer.legal.f2': { en: 'Terms', zh: '服务条款' },
+      'footer.legal.f3': { en: 'Security', zh: '安全合规' },
+      'footer.copyright': { en: '&copy; 2026 KAUP. All rights reserved.', zh: '&copy; 2026 KAUP. 保留所有权利。' }
+    };
+
+    var savedLang = localStorage.getItem('kaup-lang');
+    var detectedLang = (navigator.language || navigator.userLanguage || '').startsWith('zh') ? 'zh' : 'en';
+    var LANG = savedLang || detectedLang;
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        var text = i18n[key] && i18n[key][lang];
+        if (text) {
+          if (el.tagName === 'TITLE') {
+            el.textContent = text;
+          } else if (el.tagName === 'META') {
+            el.setAttribute('content', text);
+          } else if (el.hasAttribute('placeholder')) {
+            el.setAttribute('placeholder', text);
+          } else {
+            el.innerHTML = text;
+          }
+        }
+      });
+      // Update toggle button text
+      var toggleText = lang === 'zh' ? 'EN' : '中';
+      document.querySelectorAll('.lang-toggle').forEach(function (btn) {
+        btn.textContent = toggleText;
+      });
+    }
+
+    function toggleLang() {
+      LANG = LANG === 'zh' ? 'en' : 'zh';
+      localStorage.setItem('kaup-lang', LANG);
+      applyLang(LANG);
+    }
+
+    // Apply on load
+    applyLang(LANG);
+
+    // Bind toggle buttons
+    document.querySelectorAll('.lang-toggle').forEach(function (btn) {
+      btn.addEventListener('click', toggleLang);
+    });
+
     // ── Mobile Menu Toggle ──
     (function () {
-      const hamburger = document.getElementById('hamburger-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const closeBtn = document.getElementById('mobile-close-btn');
-      const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
-      const mobileCta = mobileMenu.querySelector('.btn');
+      var hamburger = document.getElementById('hamburger-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var closeBtn = document.getElementById('mobile-close-btn');
+      var mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+      var mobileCta = mobileMenu.querySelector('.mobile-menu-cta .btn');
 
       function openMenu() {
         mobileMenu.classList.add('open');
@@ -1568,6 +1818,75 @@ agent.<span class="fn">deploy</span>()</pre>
         });
       });
     })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kaup.ai/#organization",
+        "name": "KAUP",
+        "url": "https://kaup.ai",
+        "logo": "https://kaup.ai/logo.svg",
+        "description": "AI Agent platform purpose-built for international trade. Local-First architecture, end-to-end encryption.",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kaup.ai/#website",
+        "url": "https://kaup.ai",
+        "name": "KAUP",
+        "publisher": { "@id": "https://kaup.ai/#organization" },
+        "inLanguage": ["zh-CN", "en"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://kaup.ai/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "KAUP Platform",
+        "operatingSystem": "Windows, macOS, Linux",
+        "applicationCategory": "BusinessApplication",
+        "description": "AI Agent platform for international trade with 23 specialized agents, local-first data architecture, and offline capabilities.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Standalone",
+            "price": "499",
+            "priceCurrency": "CNY",
+            "description": "Single user, all 23 agents, local encrypted storage, BYOM"
+          },
+          {
+            "@type": "Offer",
+            "name": "Team",
+            "price": "1299",
+            "priceCurrency": "CNY",
+            "description": "Up to 15 users, all agents, ERP integration, WeChat Work API"
+          },
+          {
+            "@type": "Offer",
+            "name": "Enterprise",
+            "price": "2499",
+            "priceCurrency": "CNY",
+            "description": "Unlimited users, Docker private deployment, dedicated training"
+          }
+        ],
+        "featureList": [
+          "23 AI Agents for trade workflows",
+          "Local-First encrypted data storage",
+          "BYOM — bring your own model",
+          "Offline capability with 13 local agents",
+          "WeChat Work and WhatsApp integration",
+          "ERP integration",
+          "Browser automation"
+        ]
+      }
+    ]
+  }
   </script>
 </body>
 </html>
