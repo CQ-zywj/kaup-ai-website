@@ -387,6 +387,26 @@
       font-size: 20px;
     }
 
+    /* ── Nav Runic ── */
+    .nav-logo-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nav-runic {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      color: var(--mute);
+      opacity: 0.6;
+      line-height: 1;
+      margin-top: 1px;
+      margin-left: 23px;
+      user-select: none;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -492,6 +512,54 @@
 
     .hero .eyebrow-mono {
       margin-bottom: var(--sp-lg);
+    }
+
+    /* ── Runic Branding ── */
+    .hero-runic {
+      position: relative;
+      display: inline-block;
+      font-size: 28px;
+      letter-spacing: 0.5em;
+      color: var(--primary);
+      opacity: 0.55;
+      margin-bottom: var(--sp-md);
+      cursor: default;
+      transition: opacity 0.4s ease;
+      text-shadow: 0 0 20px rgba(0, 217, 146, 0.15);
+      user-select: none;
+    }
+
+    .hero-runic:hover {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(0, 217, 146, 0.35);
+    }
+
+    .hero-runic::after {
+      content: 'KAUP in Runic — to trade, to buy';
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: normal;
+      text-transform: none;
+      color: var(--ink);
+      background-color: var(--canvas-soft);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-sm);
+      padding: 6px 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-runic:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
 
     .hero h1 {
@@ -779,8 +847,22 @@
       margin-bottom: var(--sp-4xl);
     }
 
-    .footer-brand .nav-logo {
+    .footer-brand-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--sp-sm);
       margin-bottom: var(--sp-md);
+    }
+
+    .footer-runic {
+      font-family: var(--ff-mono);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--mute);
+      opacity: 0.45;
+      line-height: 1;
+      user-select: none;
     }
 
     .footer-brand p {
@@ -979,7 +1061,10 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="#" class="nav-logo" aria-label="KAUP Home">
-        <span class="lightning">⚡</span>KAUP
+        <div class="nav-logo-group">
+          <span><span class="lightning">⚡</span>KAUP</span>
+          <span class="nav-runic">ᚴᛆᚢᛕ</span>
+        </div>
       </a>
 
       <ul class="nav-links">
@@ -1004,7 +1089,10 @@
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <div class="mobile-menu-header">
       <a href="#" class="nav-logo" aria-label="KAUP Home">
-        <span class="lightning">⚡</span>KAUP
+        <div class="nav-logo-group">
+          <span><span class="lightning">⚡</span>KAUP</span>
+          <span class="nav-runic">ᚴᛆᚢᛕ</span>
+        </div>
       </a>
       <button class="mobile-menu-close" aria-label="Close menu" id="mobile-close-btn">&times;</button>
     </div>
@@ -1025,6 +1113,7 @@
   <section class="hero" id="hero">
     <div class="container">
       <p class="eyebrow-mono">AI AGENT PLATFORM</p>
+      <p class="hero-runic" aria-label="KAUP in Runic">ᚴᛆᚢᛕ</p>
       <h1 class="display-xl">Build Intelligent Agents<br>That Work For You</h1>
       <p class="body-lg">KAUP is the developer-first platform for building, deploying, and scaling AI agents. From simple automations to complex multi-agent systems.</p>
 
@@ -1307,9 +1396,12 @@ agent.<span class="fn">deploy</span>()</pre>
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">
-            <span class="lightning">⚡</span>KAUP
-          </a>
+          <div class="footer-brand-row">
+            <a href="#" class="nav-logo">
+              <span class="lightning">⚡</span>KAUP
+            </a>
+            <span class="footer-runic">ᚴᛆᚢᛕ</span>
+          </div>
           <p>The developer-first platform for building, deploying, and scaling AI agents.</p>
         </div>
 
